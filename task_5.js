@@ -1,16 +1,19 @@
-function Electrics(name, power) {
-    this.name = name;
-    this.power = power;
-    this.inOnline = false;    // метод, который определяет прибор как включенный в розетку
-}
+class Electrics {
+    constructor(name, power) {
+        this.name = name;
+        this.power = power;
+        this.inOnline = false;    // метод, который определяет прибор как включенный в розетку
+    }
 
-Electrics.prototype.online = function () {
-    console.log(this.name + ' consumes current.');
-    this.inOnline = true;
-}
+    online(){
+        console.log(this.name + ' consumes current.');
+        this.inOnline = true;
+    }
 
-Electrics.prototype.offline = function () {
-    return this.inOnline ? this.power : 0;
+    offline(){
+        return this.inOnline ? this.power : 0;
+    }
+
 }
 
 const laptop = new Electrics('Dell', 5);
