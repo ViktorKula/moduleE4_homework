@@ -1,5 +1,5 @@
 const obj = function () {
-    Object.create(null)
+    Object.create(null);
 }
 
 console.log(obj)
