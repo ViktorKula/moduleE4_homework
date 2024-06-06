@@ -7,7 +7,7 @@
 const obj = newObject();
 
 function newObject() {
-    return new Object();
+    return new Object(null)
 }
 
 console.log(obj)
