@@ -1,13 +1,8 @@
-// const obj = function () {
-//     Object.create(null);
-// }
-//
-// console.log(obj)
+function newObject() {
+    return Object.create(null);
+}
 
 const obj = newObject();
 
-function newObject() {
-    return new Object(null)
-}
-
 console.log(obj)
+console.log(Object.getPrototypeOf(obj));
